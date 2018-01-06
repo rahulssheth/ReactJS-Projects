@@ -1,0 +1,21 @@
+body {
+background-color: #1B6DBC;
+color: white; 
+}
+
+html {
+color: blue; 
+}
+
+script.blue {
+color: blue;
+}
+
+
+h1 { color: #fffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 62px; margin: 0 0 24px; text-align: center; }
+
+h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+input {
+height: 100%;
+}

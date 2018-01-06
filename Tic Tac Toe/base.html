@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+</head>
+<body>
+
+	<title> Tic Tac Toe </title>
+
+
+<div id='content'></div>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+<script type="text/jsx" id="blue">
+	
+var squareData = {
+	Square1: '0', 
+	Square2: '0', 
+	Square3: '0', 
+	Square4: '0', 
+	Square5: '0', 
+	Square6: 'O', 
+	Square7: 'O', 
+	Square8: '0', 
+	Square9: '0', 
+}
+
+
+var Board = React.createClass({
+	
+	getInitialState: function() {
+		return { 
+
+			show: true, 
+			changedSquare1: true, 
+			changedSquare2: true,
+			changedSquare3: true,
+			changedSquare4: true, 
+			changedSquare5: true,
+			changedSquare6: true,
+			changedSquare7: true,
+			changedSquare8: true, 
+			changedSquare9: true,  
+			Square1: "-", 
+			Square2: "-", 
+			Square3: "-", 
+			Square4: "-",
+			Square5: "-",
+			Square6: "-",
+			Square7: "-",
+			Square8: "-",
+			Square9: "-"
+
+		} 
+	}, 
+	changeShow: function() {
+	this.setState({ 
+		show: !this.state.show
+	}); 
+	}, 
+
+	changeState1: function() {
+	if (this.state.changedSquare1) {
+		if (this.state.show) {
+		this.setState({
+			Square1: "X"
+		});  
+		} else {
+		this.setState({
+			Square1: "O"
+		}); 
+	}
+		{this.changeShow()}
+		this.setState({
+			changedSquare1: false 
+
+		});
+}
+		
+	}, 
+
+	changeState2: function() {
+	if (this.state.changedSquare2) {
+	if (this.state.show) {
+		this.setState({
+			Square2: "X"
+		}); 
+		} else {
+		this.setState({
+			Square2: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare2: false 
+
+		});
+		
+		}
+	}, 
+
+	changeState3: function() {
+	if (this.state.changedSquare3) {
+	if (this.state.show) {
+		this.setState({
+			Square3: "X"
+		}); 
+		} else {
+		this.setState({
+			Square3: "O"
+		})
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare3: false 
+
+		});
+		
+		}
+	}, 
+	changeState4: function() {
+	if (this.state.changedSquare4) {
+	if (this.state.show) {
+		this.setState({
+			Square4: "X"
+		}); 
+		} else {
+		this.setState({ 
+			Square4: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare4: false 
+
+		});
+		}
+	}, 
+	changeState5: function() {
+	if (this.state.changedSquare5) {
+	if (this.state.show) {
+		this.setState({
+			Square5: "X"
+		}); 
+		} else {
+			this.setState({
+				Square5: "O"
+			}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare5: false 
+
+		});
+		}
+	}, 
+	changeState6: function() {
+	if (this.state.changedSquare6) {
+	if (this.state.show) {
+		this.setState({
+			Square6: "X"
+		}); 
+		} else {
+		this.setState({ 
+			Square6: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare6: false 
+
+		});
+		}
+	}, 
+
+	changeState7: function() {
+	if (this.state.changedSquare7) {
+	if (this.state.show) {
+		this.setState({
+			Square7: "X"
+		}); 
+		} else {
+		this.setState({
+			Square7: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare7: false 
+
+		});
+		}
+
+	}, 
+	changeState8: function() {
+	if (this.state.changedSquare8) {
+	if (this.state.show) { 
+		this.setState({
+			Square8: "X"
+		}); 
+		} else {
+		this.setState({
+			Square8: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare8: false 
+
+		});
+		
+		}
+	}, 
+	changeState9: function() {
+	if (this.state.changedSquare9) {
+	if (this.state.show) {
+		this.setState({
+			Square9: "X"
+		}); 
+		} else {
+		this.setState({
+			Square9: "O"
+		}); 
+		}
+		{this.changeShow()}
+		this.setState({
+			changedSquare9: false 
+
+		});
+		}
+	}, 
+
+	resetState: function() {
+	this.setState({ 
+		Square1: "-",
+		Square2: "-",
+		Square3: "-",
+		Square4: "-",
+		Square5: "-",
+		Square6: "-",
+		Square7: "-",
+		Square8: "-",
+		Square9: "-", 
+		show: true,
+		changedSquare1: true, 
+		changedSquare2: true,
+		changedSquare3: true,
+		changedSquare4: true, 
+		changedSquare5: true,
+		changedSquare6: true,
+		changedSquare7: true,
+		changedSquare8: true, 
+		changedSquare9: true
+		
+	});
+	}, 
+	render: function() {
+	return(
+		<div>
+ 			<h1> Tic Tac Toe V1</h1>
+ 			<h2> {this.state.Square1} {this.state.Square2} {this.state.Square3} </h2>
+ 			<br />
+ 			<h2> {this.state.Square4} {this.state.Square5} {this.state.Square6} </h2>
+ 			<br />
+ 			<h2> {this.state.Square7} {this.state.Square8} {this.state.Square9} </h2>
+ 			<br />
+ 			<input type="submit" value="Square 1" onClick={this.changeState1} /> 
+ 			<input type="submit" value="Square 2" onClick={this.changeState2} />
+ 			<input type="submit" value="Square 3" onClick={this.changeState3} />
+ 			<br />
+ 			<input type="submit" value="Square 4" onClick={this.changeState4} /> 
+ 			<input type="submit" value="Square 5" onClick={this.changeState5} />
+ 			<input type="submit" value="Square 6" onClick={this.changeState6} />
+ 			<br />
+ 			<input type="submit" value="Square 7" onClick={this.changeState7} /> 
+ 			<input type="submit" value="Square 8" onClick={this.changeState8} />
+ 			<input type="submit" value="Square 9" onClick={this.changeState9} />
+ 			<br />
+ 			<input type="submit" value="Reset" onClick={this.resetState} />
+
+		</div>
+	);
+
+
+	}
+
+});
+ReactDOM.render(<Board squareData={squareData} />, document.getElementById('content')); 
+
+</script>
+</body>
+
+</html>
