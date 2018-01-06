@@ -11,3 +11,4 @@ How to Run:
 
 Limitations: 
 1. As UI was not prioritized, I have not yet moved the buttons to the actual gameboard and created functionality knowing when someone wins the game.
+2. At some point, the introduction of a Square class would be effective so we could just create the objects and have one general functions to change from "-" to "X" and "O"
