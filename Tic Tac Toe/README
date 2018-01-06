@@ -1,0 +1,13 @@
+README: 
+
+
+Background: A very basic Tic Tac Toe game. This was the first project that I created using ReactJS. It was used primarily for the main functionality, mostly to create the squares. 
+
+* A priority was taken for functionality over UI. 
+
+
+How to Run:
+1. Download the entire folder, with the base.html file and the style.css. Then, just open up the base.html file and you can play. 
+
+Limitations: 
+1. As UI was not prioritized, I have not yet moved the buttons to the actual gameboard and created functionality knowing when someone wins the game.
