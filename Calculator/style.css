@@ -5,7 +5,7 @@ h1 {
 }
 
 h2 {
-	color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px;  
+	color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 38px; font-weight: 800; line-height: 36px; margin: 0 0 24px;  
 }
 
 body {
@@ -42,10 +42,26 @@ button {
 		color: white;
 
 }
+#left-align-minus {
+	background-color: #EF4453;
+	color: white;
+	padding-right: 36px;
+}
+#left-align-plus {
+	background-color: #EF4453;
+		color: white;
+	padding-right: 28px;
+}
 #left-align-ways {
 	background-color: #EF4453;
 		color: white;
-		padding-right: 35px;
+		padding-right: 34px;
+}
+#left-align-clear {
+
+background-color: #EF4453;
+		color: white;
+		padding-right: 24px;
 }
 #left-align-way {
 	padding-right: 33px;
