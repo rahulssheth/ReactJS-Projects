@@ -1,1 +1,16 @@
-HELLO
+README: 
+
+
+Background: A simple 4 function calculator, with basic multiplication, addition, subtraction, and division operations. In this project, I learned more about ReactJS functions and how to pass parameters over to functions on OnClick commands. 
+
+How to Run: Download the entire folder and open it in Google Chrome (most browsers should work, but this was developed and checked with Chrome).
+
+
+Limitations: 
+
+1. Some of the UI could be better. 
+2. I ran into an error where I could not change the input button to an actual button for the submit and clear functions. Maintaing all as the same
+would be more effective should I need to make UI changes in the style.css. 
+3. Possibly adding more functions would be exciting. 
+
+
