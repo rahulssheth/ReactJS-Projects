@@ -104,13 +104,13 @@
 				<button  id="right-align" type="submit" onClick={() => this.changeVal(0)}>0</button>
 				<button  id="right-align" type="submit" onClick={() => this.changeVal(1)}>1</button>
 			 	<button  id="right-align" type="submit"  onClick={() => this.changeVal(2)}>2</button>
-			 	<button  id="left-align" type="submit" value="+"  onClick={() => this.changeOper("+")}>+</button>
+			 	<button  id="left-align-plus" type="submit" value="+"  onClick={() => this.changeOper("+")}>+</button>
 
 				<br />
 				<button type="submit" value="3"  onClick={() => this.changeVal(3)}>3</button>
 				<button type="submit" value="4"  onClick={() => this.changeVal(4)}>4</button>
 				<button type="submit" value="5"  onClick={() => this.changeVal(5)}>5</button>
-				<button id="left-align-ways" type="submit" value="-"  onClick={() => this.changeOper("-")}>-</button>
+				<button id="left-align-minus" type="submit" value="-"  onClick={() => this.changeOper("-")}>-</button>
 
 				<br />
 				<button type="submit" value="6"  onClick={() => this.changeVal(6)}>6</button>
@@ -123,7 +123,7 @@
 
 				<button id="left-align-way" type="submit" value="/"  onClick={() => this.changeOper("/")}>/</button>
 				<input type="submit" value="="  onClick={this.submit} />
-				<input id="left-align" type="submit" value="C" onClick={this.clear} />
+				<input id="left-align-clear" type="submit" value="C" onClick={this.clear} />
 			</div>);
 		}
 	});
