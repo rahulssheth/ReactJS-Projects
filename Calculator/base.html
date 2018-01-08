@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<title>Calculator</title>
+</head>
+
+	<div id="content"></div>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+
+<body>
+<div id="content"></div>
+<script type="text/jsx" id="blue">
+	var Calculator = React.createClass({
+		
+
+		getInitialState: function() {
+		return {
+			finalVal: 0,
+			firstVal: 0,
+			displayVal: 0,
+			secondVal: 0,
+			operVal: "+",
+			isOnFirst: true
+		  }
+		}, 
+
+		changeVal: function(passedVal) {
+		if (this.state.isOnFirst) {
+			this.setState({ 
+			firstVal: this.state.firstVal * 10 + passedVal,
+			finalVal: this.state.firstVal * 10 + passedVal
+			});
+			} else {
+			this.setState({
+				secondVal: this.state.secondVal * 10 + passedVal,
+				finalVal: this.state.secondVal * 10 + passedVal
+			});
+			}
+
+
+		}, 
+
+		changeOper: function(passedOper) {
+			this.setState({ 
+				operVal: passedOper, 
+				isOnFirst: false 
+			}); 
+		}, 
+		submit: function() {
+		if (this.state.operVal == "+") {
+			this.setState({ 
+				finalVal: this.state.firstVal + this.state.secondVal,
+				firstVal: this.state.firstVal + this.state.secondVal, 
+			
+			}); 
+			} else if (this.state.operVal == "-") {
+			this.setState({
+				finalVal: this.state.firstVal - this.state.secondVal,
+				firstVal: this.state.firstVal - this.state.secondVal,
+			});
+			} else if (this.state.operVal == "*") {
+			this.setState({
+				finalVal: this.state.firstVal * this.state.secondVal,
+				firstVal: this.state.firstVal * this.state.secondVal, 
+			
+			});
+			} else {
+			this.setState({
+				finalVal: this.state.firstVal / this.state.secondVal,
+				firstVal: this.state.firstVal / this.state.secondVal, 
+				
+			});
+			}
+
+			this.setState({
+				isOnFirst: true, 
+				secondVal: 0
+			}); 
+		},
+
+		clear: function() {
+			this.setState({ 
+				finalVal: 0, 
+				firstVal: 0,
+				displayVal: 0,
+				secondVal: 0, 
+				operVal: "+", 
+				isOnFirst: true
+			});
+		}, 
+
+		render: function() {
+			return(<div>
+				<h1> Calculator App </h1>
+				<div id="container">
+				<h2> {this.state.finalVal} </h2>
+				</div>
+				<button  id="right-align" type="submit" onClick={() => this.changeVal(0)}>0</button>
+				<button  id="right-align" type="submit" onClick={() => this.changeVal(1)}>1</button>
+			 	<button  id="right-align" type="submit"  onClick={() => this.changeVal(2)}>2</button>
+			 	<button  id="left-align" type="submit" value="+"  onClick={() => this.changeOper("+")}>+</button>
+
+				<br />
+				<button type="submit" value="3"  onClick={() => this.changeVal(3)}>3</button>
+				<button type="submit" value="4"  onClick={() => this.changeVal(4)}>4</button>
+				<button type="submit" value="5"  onClick={() => this.changeVal(5)}>5</button>
+				<button id="left-align-ways" type="submit" value="-"  onClick={() => this.changeOper("-")}>-</button>
+
+				<br />
+				<button type="submit" value="6"  onClick={() => this.changeVal(6)}>6</button>
+				<button type="submit" value="7"  onClick={() => this.changeVal(7)}>7</button>
+				<button type="submit" value="8"  onClick={() => this.changeVal(8)}>8</button>
+				<button id="left-align-ways" type="submit" value="*"  onClick={() => this.changeOper("*")}>*</button>
+
+				<br />
+				<button type="submit" value="9"  onClick={() => this.changeVal(9)}>9</button>
+
+				<button id="left-align-way" type="submit" value="/"  onClick={() => this.changeOper("/")}>/</button>
+				<input type="submit" value="="  onClick={this.submit} />
+				<input id="left-align" type="submit" value="C" onClick={this.clear} />
+			</div>);
+		}
+	});
+	ReactDOM.render(<Calculator />, document.getElementById('content')); 
+</script>
+</body>
+</html>
