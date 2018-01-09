@@ -1,0 +1,117 @@
+<html>
+
+
+<head>
+
+<title>Search People</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+</head>
+
+<body> 
+
+<div id="content"></div>
+
+<script type="text/jsx" id="blue">
+
+
+
+var TopDATA = {
+	
+	peopleList: ['Nikhil', 'Moxit',  'Archit', 'Sai', 'Leon', 'James', 'Jeffrey', 'Venkat', 'Sheldon', 'Alex', 'Jay'],
+
+	websiteList: ["nikhil.nxtpitch.com", "http://moxit.nxtpitch.com", "http://archit.nxtpitch.com", "http://sai.nxtpitch.com", "https://leon.nxtpitch.com", "https://james.nxtpitch.com", "https://jeffrey.nxtpitch.com", "https://venkat.nxtpitch.com", "https://sheldon.nxtpitch.com", "http://alex.nxtpitch.com", "https://jay.nxtpitch.com"]
+}
+var App = React.createClass({
+	render: function() {
+		return(<div>
+			<TopComp />
+			<Search 
+				searchList={this.props.Data} />
+
+		</div>); 
+	}
+});
+
+var TopComp = React.createClass({ 
+	render: function() {
+	return(<div>
+	<div id="container">
+		<h1> Search List </h1>
+		<h4> Search through the students on the NXTPitch site </h4>
+		<a href="https://feed.nxtpitch.com" target="_blank">Click here for the full feed </a>
+	</div>
+	</div>);
+}
+});
+var Search = React.createClass({
+
+getInitialState: function() {
+
+		return {
+			search: "", 
+			topVal: "oh"
+		}
+	}, 
+
+	updateSearch: function(event) {
+		this.setState({
+			search: event.target.value, 
+			
+		});
+	}, 
+
+	goToUrl: function(index) {
+		this.setState({
+			topVal: "Nice"
+
+		});
+	}, 
+	
+	render: function() { 
+	let filteredNames = this.props.searchList.peopleList.filter( 
+		(name) => {
+			return name.indexOf(this.state.search) !== -1; 
+		}
+
+
+	); 
+	var website = this.props.searchList.websiteList.map(function(website, index){
+		return (<span key={index}>
+
+			{website}
+
+		</span>)
+
+	});
+	var names = filteredNames.map(function(name, index){
+		let val = {name};
+		let newVal = `https://${name}.nxtpitch.com`
+		return (<span key={index}>
+			<br />
+			<a href={newVal} target="_blank">{name} </a>
+			<br />
+			<br />
+			</span>
+
+		);
+	});
+		return( 
+		<div id="container2">
+		<input type="text" defaultValue={this.state.search} onChange={this.updateSearch.bind(this)} />
+		{names}
+		</div>
+		); 
+
+	}
+
+});
+
+ReactDOM.render(<App Data={TopDATA} />, document.getElementById('content'));
+
+</script>
+
+</body>
+</html>

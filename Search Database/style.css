@@ -1,0 +1,56 @@
+h4 {
+	text-align: center;
+	color: white;
+	font-family: 'Raleway',sans-serif; font-size: 20px; font-weight: 500; line-height: 40px; margin: 0 0 24px;
+
+}
+h1 {
+	text-align: center;
+	color: white;
+	font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 62px; margin: 0 0 24px;
+}
+
+#container {
+	background-color: #1B6DBC;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+border: 12px solid #47BCD6;
+}
+
+body {
+	background-color: grey;
+}
+
+#container2 {
+	background-color: teal;
+	width: 40%;
+	margin: auto;
+	text-align: center;
+}
+
+input[type=text] {
+	background-color: #1FBFB3;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'Raleway',sans-serif; font-size: 15px; font-weight: 200; line-height: 20px; margin: 0 0 24px;
+	color: white;
+	margin-top: 10px;
+
+}
+
+
+a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: green;
+	width: 50px;
+	color: white;
+	text-decoration: none;
+
+}
+
