@@ -1,0 +1,6 @@
+README: 
+
+A search filter for recruiters to parse easily through the students on the NXTPitch Website. The idea is that this would be a
+key feature on the Web App version of NXTPitch. For the companion project, see my NXTPitch Repo or see https://feed.nxtpitch.com
+For this project, I used various builtin functions, such as map and filter, to set up the page. 
+
