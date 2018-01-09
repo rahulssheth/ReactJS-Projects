@@ -4,3 +4,14 @@ A search filter for recruiters to parse easily through the students on the NXTPi
 key feature on the Web App version of NXTPitch. For the companion project, see my NXTPitch Repo or see https://feed.nxtpitch.com
 For this project, I used various builtin functions, such as map and filter, to set up the page. 
 
+
+
+
+How To Run: 
+
+This can be run in a similar method to the other projects. Simply download the entire folder and open up the base.html file in Chrome. 
+
+Limitations:
+
+1. The next step would be to integrate this with the Firebase backend I used for the mobile app to build a more sophisticated filter, based on things like skills, etc.
+2. Another way to link to the individuals website would probably be better. I used a string concatenation method which, although it works, may not be the best idea. 
